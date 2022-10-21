@@ -17,8 +17,8 @@ imgs = [
 
 """de_detr"""
 # trained weight
-config_file = 'tutorial_exps/self-de-detr/slurm-4045240/deformable_detr_cityscapes.py'
-tested_ckp = "tutorial_exps/self-de-detr/slurm-4045240/latest.pth"
+config_file = 'configs/deformable_detr/deformable_detr_cityscapes.py'
+tested_ckp = "deformable_detr_cityscapes_epoch_8.pth"
 # pretrained weight
 # config_file = 'deformable_detr_r50_16x2_50e_coco.py'
 # tested_ckp = "deformable_detr_r50_16x2_50e_coco_20210419_220030-a12b9512.pth"    

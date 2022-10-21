@@ -76,7 +76,7 @@ With the tensorboard hook on, the training loss/metric figure can be easily chec
 <img src="doc/cityscpes_de_detr_after_train_2.png"/>
 
 ## Test with img/imgs
-Since cityscapes has a "rider" class which is quite interesting for us. (Since coco doesn't have rider)We picked some pictures with GT label "rider", and compare it with before and after finetuned's model in `test.py`. 
+Since cityscapes has a "rider" class which is quite interesting for us. (Since coco doesn't have rider)We picked some pictures with GT label "rider", and compare it with before and after finetuned's model in `test.py`. The trained pth files can be downloded [here](https://kth-my.sharepoint.com/:f:/g/personal/yiya_ug_kth_se/Es6IsXrh1AtAkvIQvAiDtIYBuCrno0URwMHhqR9WOaTY7Q?e=AIaI0X)
 
 Without finetuning
 ![](doc/cityscpes_de_detr_before_train_1.png)

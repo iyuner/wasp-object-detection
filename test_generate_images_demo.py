@@ -8,8 +8,8 @@ demo_images_dir = "data/cityscapes/leftImg8bit/demoVideo/stuttgart_00"
 imgs = [os.path.join(demo_images_dir, file) for file in os.listdir(demo_images_dir)]
 
 """de_detr"""
-config_file = 'tutorial_exps/self-de-detr/slurm-4045240/deformable_detr_cityscapes.py'
-tested_ckp = "tutorial_exps/self-de-detr/slurm-4045240/epoch_5.pth"    # trained weight
+config_file = 'configs/deformable_detr/deformable_detr_cityscapes.py'
+tested_ckp = "deformable_detr_cityscapes_epoch_8.pth"
 # config_file = 'deformable_detr_r50_16x2_50e_coco.py'
 # tested_ckp = "deformable_detr_r50_16x2_50e_coco_20210419_220030-a12b9512.pth"    # pretrained weight
 
