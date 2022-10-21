@@ -1,6 +1,6 @@
 The course project is to apply object detection in Urban Traffic (e.g. detection of cars)
 
-- Tools: PyTorch, mmDetection tool (from OpenMMLab project)
+- Tools: PyTorch, [**mmDetection tool**](https://github.com/open-mmlab/mmdetection) (from OpenMMLab project)
 - Data: 
     - Pretrained with [COCO Dataset](https://cocodataset.org/#home): Common Objects in Context
     - Fine-tuning in [Cityscape dataset](https://www.cityscapes-dataset.com)
