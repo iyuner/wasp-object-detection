@@ -23,12 +23,16 @@ tested_ckp = "deformable_detr_cityscapes_epoch_8.pth"
 # config_file = 'deformable_detr_r50_16x2_50e_coco.py'
 # tested_ckp = "deformable_detr_r50_16x2_50e_coco_20210419_220030-a12b9512.pth"    
 
+"""fater rcnn"""
+# trained weight
+# config_file = 'configs/faster_rcnn/faster_rcnn_r50_fpn_1x_cityscapes.py'
+# tested_ckp = "faster_rcnn_cityscapes_epoch_8.pth"
+# pretrained weight
+# config_file = 'faster_rcnn_r50_fpn_1x_coco.py'
+# tested_ckp = "faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth"
+
+
 saved_model = init_detector(config_file, tested_ckp, device='cpu')
-
-
-
-# checkpoint_file = 'yolov3_mobilenetv2_320_300e_coco_20210719_215349-d18dff72.pth'
-# model = init_detector(config_file, checkpoint_file, device='cpu')  # or device='cuda:0'
 
 # test a single image
 results = inference_detector(saved_model, imgs)

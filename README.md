@@ -66,6 +66,13 @@ python tools/train.py \
 ```
 With the tensorboard hook on, the training loss/metric figure can be easily checked. It takes around 2 hour to train in a single A100 gpu for one epoch.
 
+Here also try another lighter method with cityscapes config file  which is directly provided by mmdetection. Download the pretrained weight and its config by `mim download mmdet --config faster_rcnn_r50_fpn_1x_coco --dest .`
+```
+python tools/train.py \
+    configs/faster_rcnn/faster_rcnn_r50_fpn_1x_cityscapes.py \
+    --work-dir logs_ckpt/faster_rcnn/
+```
+
 ## Result
 |  bbox_mAP | bbox_mAP_50 | bbox_mAP_75 | bbox_mAP_s | bbox_mAP_m | bbox_mAP_l| 
 | --- | --- | --- | --- | --- | --- |
