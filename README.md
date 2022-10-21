@@ -28,7 +28,6 @@ pip install mmdet
 3. put the data with a specific structure folder according to [link](https://github.com/open-mmlab/mmdetection/blob/ca11860f4f3c3ca2ce8340e2686eeaec05b29111/docs/en/3_exist_data_new_model.md)
     ```
     repo
-    ├── mmdet
     ├── tools
     ├── configs
     ├── data
@@ -56,7 +55,7 @@ mim download mmdet --config deformable_detr_r50_16x2_50e_coco --dest .
 It should get the config file *deformable_detr_r50_16x2_50e_coco.py* and pretrained checkpoint *deformable_detr_r50_16x2_50e_coco_20210419_220030-a12b9512.pth*.
 
 ## Modify the config file for training on Cityscapes.
-The new modifed config file is *configs/deformable_detr/deformable_detr_cityscapes.py* which have the dataset folder, change the images scales accroding to cityscapes, and load checkpoint from the pretrained pth file.
+The new modifed config file is *configs/deformable_detr/deformable_detr_cityscapes.py* which sets the dataset folder path, changes the images scales accroding to cityscapes, and loads checkpoint from the specific pretrained pth file.
 
 ## Train
 ```
@@ -66,7 +65,7 @@ python tools/train.py \
 ```
 With the tensorboard hook on, the training loss/metric figure can be easily checked. It takes around 2 hour to train in a single A100 gpu for one epoch.
 
-Here also try another lighter method with cityscapes config file  which is directly provided by mmdetection. Download the pretrained weight and its config by `mim download mmdet --config faster_rcnn_r50_fpn_1x_coco --dest .`
+Here also tried another lighter method with cityscapes config file which is directly provided by mmdetection. Download the pretrained weight and its config by `mim download mmdet --config faster_rcnn_r50_fpn_1x_coco --dest .`
 ```
 python tools/train.py \
     configs/faster_rcnn/faster_rcnn_r50_fpn_1x_cityscapes.py \
@@ -83,7 +82,7 @@ python tools/train.py \
 <img src="doc/cityscpes_de_detr_after_train_2.png"/>
 
 ## Test with img/imgs
-Since cityscapes has a "rider" class which is quite interesting for us. (Since coco doesn't have rider)We picked some pictures with GT label "rider", and compare it with before and after finetuned's model in `test.py`. The trained pth files can be downloded [here](https://kth-my.sharepoint.com/:f:/g/personal/yiya_ug_kth_se/Es6IsXrh1AtAkvIQvAiDtIYBuCrno0URwMHhqR9WOaTY7Q?e=AIaI0X)
+Since cityscapes has a "rider" class which is quite interesting for us. (Since coco doesn't have rider.) We picked some pictures with GT label "rider", and compare it with before and after finetuned's model in `test.py`. The trained pth files can be downloded [here](https://kth-my.sharepoint.com/:f:/g/personal/yiya_ug_kth_se/Es6IsXrh1AtAkvIQvAiDtIYBuCrno0URwMHhqR9WOaTY7Q?e=AIaI0X)
 
 Without finetuning
 ![](doc/cityscpes_de_detr_before_train_1.png)
